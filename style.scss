@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  box-sizing: border-box;
+}
+
+// font import //
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;700&display=swap");
+
+// Colors //
+$colorPurple: #292b73;
+$colorYellow: #ffb637;
+
+// buttons //
+.btn-group {
+  display: flex;
+  gap: 16px;
+  justify-content: flex-end;
+  margin-top: 24px;
+}
+.btn {
+  min-width: 60px;
+  padding: 8px 12px;
+  font-size: 12px;
+  font-weight: 700;
+  background-color: inherit;
+  outline: none;
+  border-radius: 2px;
+  border: 3px solid $colorPurple;
+  background-color: inherit;
+  cursor: pointer;
+
+  &.btn--purple {
+    background-color: $colorPurple;
+    color: white;
+    border: none;
+  }
+  &.btn--yellow {
+    background-color: $colorYellow;
+    color: $colorPurple;
+    border: none;
+  }
+}
+
+// global //
+html,
+body {
+  font-family: "Noto Sans TC", sans-serif;
+  width: 100%;
+  height: 100%;
+  background-color: $colorPurple;
+}
+
+body {
+  padding: 100px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ul li {
+  list-style: none;
+}
+
+.panels {
+  display: flex;
+}
+.panel {
+  max-width: 900px;
+  padding: 32px;
+  background-color: #fff;
+  color: $colorPurple;
+  flex: 5;
+  box-shadow: 0 0 30px rbga(black, 0.2);
+  border-radius: 4px;
+  z-index: 1;
+
+  &.yellow {
+    background-color: $colorYellow;
+    flex: 4;
+  }
+  h1,
+  h3 {
+    text-align: center;
+  }
+  h1 {
+    font-weight: 7000;
+    margin-bottom: 32px;
+  }
+  h3 {
+    font-weight: 400;
+  }
+}
+textarea {
+  width: 100%;
+  padding: 16px;
+  font-size: 20px;
+  letter-spacing: 1px;
+  outline: none;
+  border: solid 2px rgba(grey, 0.2);
+  &:focus {
+    border-color: $colorPurple;
+  }
+}
+
+.tranSymbol {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+hr {
+  border: none;
+  border-bottom: 3px solid $colorPurple;
+  margin-top: 8px;
+}
+
+// Translist //
+.transList {
+  padding-top: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  height: 450px;
+  flex-wrap: wrap;
+  li {
+    width: 30%;
+    font-size: 18px;
+  }
+}
+
+// Decoration
+
+.decoration {
+  font-size: 400px;
+  line-height: 400px;
+  color: white;
+  font-weight: 900;
+  opacity: 0.1;
+  letter-spacing: 0.8px;
+  z-index: 0;
+  position: absolute;
+  top: -50px;
+  left: -70px;
+}
